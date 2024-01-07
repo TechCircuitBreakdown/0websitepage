@@ -16,6 +16,12 @@
             margin-bottom: 20px;
         }
 
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
         .color-button {
             width: 150px;
             height: 150px;
@@ -62,11 +68,11 @@
 
     <h1>Simon Says Game</h1>
     <div id="sequence"></div>
-    <div>
+    <div class="button-container">
         <button class="color-button red" onclick="checkSequence('red')" id="redButton">Red</button>
         <button class="color-button blue" onclick="checkSequence('blue')" id="blueButton">Blue</button>
     </div>
-    <div>
+    <div class="button-container">
         <button class="color-button green" onclick="checkSequence('green')" id="greenButton">Green</button>
         <button class="color-button yellow" onclick="checkSequence('yellow')" id="yellowButton">Yellow</button>
     </div>
