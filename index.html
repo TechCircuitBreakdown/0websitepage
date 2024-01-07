@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 20px;
+        }
+
+        td {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            border: 1px solid #000;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Tic-Tac-Toe Game</h1>
+
+<table id="ticTacToe">
+    <tr>
+        <td onclick="makeMove(this)"></td>
+        <td onclick="makeMove(this)"></td>
+        <td onclick="makeMove(this)"></td>
+    </tr>
+    <tr>
+        <td onclick="makeMove(this)"></td>
+        <td onclick="makeMove(this)"></td>
+        <td onclick="makeMove(this)"></td>
+    </tr>
+    <tr>
+        <td onclick="makeMove(this)"></td>
+        <td onclick="makeMove(this)"></td>
+        <td onclick="makeMove(this)"></td>
+    </tr>
+</table>
+
+<button onclick="restartGame()">Restart Game</button>
+
+<script>
+    let currentPlayer = 'X';
+    let gameBoard = [
+        ['', '', ''],
+        ['', '', ''],
+        ['', '', '']
+    ];
+
+    function makeMove(cell) {
+        const row = cell.parentNode.rowIndex;
+        const col = cell.cellIndex;
+
+        if (gameBoard[row][col] === '' && !checkWinner()) {
+            cell.textContent = currentPlayer;
+            gameBoard[row][col] = currentPlayer;
+
+            if (checkWinner()) {
+                alert(`Player ${currentPlayer} wins! Redirecting to done.html.`);
+                window.location.href = 'done.html';
+            } else if (checkTie()) {
+                alert('It\'s a tie! Restarting the game.');
+                restartGame();
+            } else {
+                currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+                if (currentPlayer === 'O') {
+                    // Computer's move
+                    setTimeout(makeComputerMove, 500);
+                }
+            }
+        }
+    }
+
+    function makeComputerMove() {
+        if (!checkWinner()) {
+            // Check for a winning move
+            let winningMove = findWinningMove('O');
+            if (winningMove) {
+                makeMoveAt(winningMove.row, winningMove.col);
+            } else {
+                // Check for a blocking move
+                let blockingMove = findWinningMove('X');
+                if (blockingMove) {
+                    makeMoveAt(blockingMove.row, blockingMove.col);
+                } else {
+                    // If no winning or blocking move, make a random move
+                    makeRandomMove();
+                }
+            }
+
+            if (checkWinner()) {
+                alert(`Player ${currentPlayer} wins! Redirecting to done.html.`);
+                window.location.href = 'done.html';
+            } else if (checkTie()) {
+                alert('It\'s a tie! Restarting the game.');
+                restartGame();
+            } else {
+                currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+            }
+        }
+    }
+
+    function findWinningMove(player) {
+        // Check rows, columns, and diagonals for a winning move
+        for (let i = 0; i < 3; i++) {
+            for (let j = 0; j < 3; j++) {
+                if (gameBoard[i][j] === '') {
+                    // Simulate making the move and check for a win
+                    gameBoard[i][j] = player;
+                    if (checkWinner()) {
+                        // Reset the board and return the winning move
+                        gameBoard[i][j] = '';
+                        return { row: i, col: j };
+                    }
+                    // Undo the move
+                    gameBoard[i][j] = '';
+                }
+            }
+        }
+
+        // No winning move found
+        return null;
+    }
+
+    function makeMoveAt(row, col) {
+        const cell = document.getElementById('ticTacToe').rows[row].cells[col];
+        cell.textContent = currentPlayer;
+        gameBoard[row][col] = currentPlayer;
+    }
+
+    function makeRandomMove() {
+        // Make a random move in an empty cell
+        let emptyCells = [];
+        for (let i = 0; i < 3; i++) {
+            for (let j = 0; j < 3; j++) {
+                if (gameBoard[i][j] === '') {
+                    emptyCells.push({ row: i, col: j });
+                }
+            }
+        }
+
+        if (emptyCells.length > 0) {
+            const randomIndex = Math.floor(Math.random() * emptyCells.length);
+            const computerMove = emptyCells[randomIndex];
+            makeMoveAt(computerMove.row, computerMove.col);
+        }
+    }
+
+    function checkWinner() {
+        // Check rows, columns, and diagonals for a win
+        for (let i = 0; i < 3; i++) {
+            if (gameBoard[i][0] !== '' &&
+                gameBoard[i][0] === gameBoard[i][1] &&
+                gameBoard[i][1] === gameBoard[i][2]) {
+                return true; // Row win
+            }
+            if (gameBoard[0][i] !== '' &&
+                gameBoard[0][i] === gameBoard[1][i] &&
+                gameBoard[1][i] === gameBoard[2][i]) {
+                return true; // Column win
+            }
+        }
+
+        if (gameBoard[0][0] !== '' &&
+            gameBoard[0][0] === gameBoard[1][1] &&
+            gameBoard[1][1] === gameBoard[2][2]) {
+            return true; // Diagonal win (top-left to bottom-right)
+        }
+
+        if (gameBoard[0][2] !== '' &&
+            gameBoard[0][2] === gameBoard[1][1] &&
+            gameBoard[1][1] === gameBoard[2][0]) {
+            return true; // Diagonal win (top-right to bottom-left)
+        }
+
+        return false; // No winner yet
+    }
+
+    function checkTie() {
+        // Check if there are no empty cells left
+        for (let i = 0; i < 3; i++) {
+            for (let j = 0; j < 3; j++) {
+                if (gameBoard[i][j] === '') {
+                    return false; // There is an empty cell, not a tie
+                }
+            }
+        }
+        return true; // All cells are filled, it's a tie
+    }
+
+    function restartGame() {
+        gameBoard = [
+            ['', '', ''],
+            ['', '', ''],
+            ['', '', '']
+        ];
+
+        currentPlayer = 'X';
+
+        const cells = document.querySelectorAll('#ticTacToe td');
+        cells.forEach(cell => {
+            cell.textContent = '';
+        });
+
+        if (currentPlayer === 'O') {
+            // Computer's move
+            setTimeout(makeComputerMove, 500);
+        }
+    }
+</script>
+
+</body>
+</html>
