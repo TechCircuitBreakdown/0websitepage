@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Says Game</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #sequence {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .color-button {
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            font-size: 1.5em;
+        }
+
+        .red { background-color: #FF5959; }
+        .blue { background-color: #59A5FF; }
+        .green { background-color: #7CE57C; }
+        .yellow { background-color: #FFFF82; }
+
+        #score {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        .glow {
+            animation: glow 0.3s ease-in-out;
+        }
+
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.7);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 20px 8px rgba(255, 255, 255, 0.9);
+                transform: scale(1.1);
+            }
+            100% {
+                box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.7);
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Simon Says Game</h1>
+    <div id="sequence"></div>
+    <div>
+        <button class="color-button red" onclick="checkSequence('red')" id="redButton">Red</button>
+        <button class="color-button blue" onclick="checkSequence('blue')" id="blueButton">Blue</button>
+    </div>
+    <div>
+        <button class="color-button green" onclick="checkSequence('green')" id="greenButton">Green</button>
+        <button class="color-button yellow" onclick="checkSequence('yellow')" id="yellowButton">Yellow</button>
+    </div>
+    <p id="score">Score: 0</p>
+
+    <script>
+        const colors = ['red', 'blue', 'green', 'yellow'];
+        let sequence = [];
+        let userSequence = [];
+        let score = 0;
+
+        function startGame() {
+            sequence = [];
+            userSequence = [];
+            score = 0;
+            nextTurn();
+        }
+
+        function nextTurn() {
+            addToSequence();
+            showSequence();
+        }
+
+        function addToSequence() {
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            sequence.push(randomColor);
+        }
+
+        function showSequence() {
+            let i = 0;
+            const interval = setInterval(() => {
+                highlightButton(sequence[i]);
+                i++;
+                if (i >= sequence.length) {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        clearButtonHighlight();
+                    }, 200);
+                }
+            }, 500);
+        }
+
+        function highlightButton(color) {
+            const button = document.getElementById(`${color}Button`);
+            button.classList.add('glow');
+            setTimeout(() => {
+                button.classList.remove('glow');
+            }, 200);
+        }
+
+        function clearButtonHighlight() {
+            document.querySelectorAll('.color-button').forEach(button => {
+                button.classList.remove('glow');
+            });
+        }
+
+        function checkSequence(color) {
+            userSequence.push(color);
+
+            if (userSequence.join('') === sequence.join('')) {
+                score++;
+                document.getElementById('score').innerHTML = 'Score: ' + score;
+
+                if (score >= 10) {
+                    window.location.href = 'next.html';
+                } else {
+                    userSequence = [];
+                    setTimeout(() => {
+                        nextTurn();
+                    }, 500);
+                }
+            } else if (!sequence.join('').startsWith(userSequence.join(''))) {
+                alert('Wrong sequence! Game over. Your score is: ' + score);
+                startGame();
+            }
+        }
+
+        // Start the game when the page loads
+        window.onload = startGame;
+    </script>
+
+</body>
+</html>
