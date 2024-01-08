@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Your Path</title>
+</head>
+<body>
+
+  <h1>Choose Your Path</h1>
+
+  <p>Where would you like to go?</p>
+
+  <button onclick="redirectOption('youtube.html')">Path 1</button>
+  <button onclick="redirectOption('hacker.html')">Path 2</button>
+
+  <script>
+    function redirectOption(path) {
+      window.location.href = path; // Redirect to the specified HTML page
+    }
+  </script>
+
+</body>
+</html>
