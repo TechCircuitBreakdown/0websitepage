@@ -18,14 +18,9 @@
             display: inline-block;
             font-size: 16px;
             cursor: pointer;
-        }
-
-        img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
+            /* Set the background image for the button */
+            background: url('icons/Mazzer.png') no-repeat center center;
+            background-size: cover;
         }
     </style>
 </head>
@@ -33,10 +28,7 @@
 
     <h1>Welcome to the Human Verification Page</h1>
 
-    <button onclick="redirectToTicTacToePage()">
-        <img src="icons/Barbarahahaha.png" alt="Barbarahahaha Icon"> <!-- Your image goes here -->
-        Verify You Are Human
-    </button>
+    <button onclick="redirectToTicTacToePage()">Verify You Are Human</button>
 
     <script>
         function redirectToTicTacToePage() {
