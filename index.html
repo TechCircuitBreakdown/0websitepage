@@ -4,12 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verify You Are Human</title>
+    <style>
+        /* Add some styling to make the button visually appealing */
+        button {
+            position: relative;
+            overflow: hidden;
+            background-color: #4CAF50; /* Green background color, you can change it */
+            color: white; /* Text color, you can change it */
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+    </style>
 </head>
 <body>
 
     <h1>Welcome to the Human Verification Page</h1>
 
-    <button onclick="redirectToTicTacToePage()">Verify You Are Human</button>
+    <button onclick="redirectToTicTacToePage()">
+        <img src="icons/Mazzer.png" alt="Mazzer Icon"> <!-- Your image goes here -->
+        Verify You Are Human
+    </button>
 
     <script>
         function redirectToTicTacToePage() {
