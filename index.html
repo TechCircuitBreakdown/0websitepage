@@ -23,6 +23,7 @@
         .image-container {
             width: 100%;
             text-align: center;
+            margin-bottom: 20px; /* Add some margin between images and button */
         }
 
         .image-container img {
@@ -46,7 +47,9 @@
         <img src="icons/AnotherImage.png" alt="Another Image Icon"> <!-- Your second image goes here -->
     </div>
 
-    <button onclick="redirectToTicTacToePage()">Verify You Are Human</button>
+    <div class="image-container">
+        <button onclick="redirectToTicTacToePage()">Verify You Are Human</button>
+    </div>
 
     <script>
         function redirectToTicTacToePage() {
