@@ -100,15 +100,19 @@
                 }
             }
 
-            if (checkWinner()) {
-                alert(`Player ${currentPlayer} wins! Redirecting to done.html.`);
-                window.location.href = 'done.html';
-            } else if (checkTie()) {
-                alert('It\'s a tie! Restarting the game.');
-                restartGame();
-            } else {
-                currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-            }
+        if (checkWinner() && currentPlayer === 'X') {
+            alert(`Player ${currentPlayer} wins! Redirecting to done.html.`);
+            window.location.href = 'done.html';
+        } else if (checkWinner() && currentPlayer === 'O') {
+            alert(`Player ${currentPlayer} wins! Restarting the game.`);
+            restartGame();
+        } else if (checkTie()) {
+            alert('It\'s a tie! Restarting the game.');
+            restartGame();
+        } else {
+            currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+        }
+
         }
     }
 
