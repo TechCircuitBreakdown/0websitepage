@@ -106,6 +106,9 @@
       .then(data => {
         console.log('Message sent successfully:', data);
 
+        // Additional logging for debugging
+        console.log('Redirecting to griddy.html...');
+        
         // Redirect to griddy.html after successful message sending
         window.location.href = 'griddy.html';
       })
