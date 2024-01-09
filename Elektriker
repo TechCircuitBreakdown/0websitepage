@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektrikerfaget</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #3366cc;
+        }
+        p {
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Elektrikerfaget</h1>
+
+    <p>
+        Velkommen til vores side om elektrikerfaget. Elektrikere spiller en vigtig rolle i installation,
+        vedligeholdelse og reparation af elektriske systemer. De arbejder inden for en række områder,
+        herunder boliger, erhvervslivet og industrielle faciliteter.
+    </p>
+
+    <h2>Arbejdsopgaver som elektriker:</h2>
+
+    <ul>
+        <li>Installation af elektriske systemer i nye bygninger</li>
+        <li>Vedligeholdelse og reparation af eksisterende elektriske installationer</li>
+        <li>Fejlfinding og diagnosticering af elektriske problemer</li>
+        <li>Arbejde med forskellige elektriske apparater og udstyr</li>
+        <li>Etablering af sikkerhedsforanstaltninger for at forhindre elektriske farer</li>
+    </ul>
+
+    <h2>Uddannelse som elektriker:</h2>
+
+    <p>
+        For at blive elektriker kræves normalt en relevant uddannelse og praktisk erfaring.
+        Dette kan opnås gennem en elektrikeruddannelse eller lignende uddannelsesprogrammer.
+        Elektrikere skal også være opmærksomme på de gældende elektriske sikkerhedsstandarder og
+        lovgivning for at udføre deres arbejde sikkert og effektivt.
+    </p>
+
+    <p>
+        Hvis du er interesseret i elektrikerfaget, kan du udforske uddannelsesmuligheder og
+        relevante certificeringer for at starte din karriere som elektriker.
+    </p>
+
+    <footer>
+        <p>© 2024 ElektrikerFaget.dk</p>
+    </footer>
+
+</body>
+</html>
