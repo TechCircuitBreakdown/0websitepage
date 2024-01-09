@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reddit Lookalike</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0; /* Light gray background color */
+    }
+
+    header {
+      background-color: #ff8c00; /* Orange header color */
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+      font-size: 1.5em;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    .post {
+      background-color: #fff; /* White post background color */
+      border: 1px solid #ddd; /* Light gray border color */
+      border-radius: 5px;
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+
+    .post h2 {
+      color: #333; /* Dark gray post title color */
+    }
+
+    .post p {
+      color: #555; /* Medium gray post text color */
+    }
+
+    .post-footer {
+      margin-top: 10px;
+      font-size: 0.8em;
+      color: #777; /* Gray post footer color */
+    }
+
+    .post-footer a {
+      color: #0079d3; /* Blue link color */
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: #ff8c00; /* Orange footer color */
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Webhook Sender Styles */
+    #webhookSenderContainer {
+      background-color: #fff; /* White background color */
+      padding: 20px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #webhookForm {
+      display: inline-block;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Reddit Lookalike</h1>
+  </header>
+
+  <main>
+    <!-- No sample post in this version -->
+
+    <!-- Add more posts as needed -->
+
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Reddit Lookalike</p>
+  </footer>
+
+  <!-- Webhook Sender Section -->
+  <div id="webhookSenderContainer">
+    <h2>Webhook Sender</h2>
+
+    <form id="webhookForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br>
+
+      <button type="button" onclick="sendMessage()">Send Message</button>
+    </form>
+  </div>
+  <!-- End of Webhook Sender Section -->
+
+</body>
+
+</html>
