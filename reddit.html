@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reddit Lookalike</title>
+  <link rel="icon" href="icons/favi.ico" type="image/x-icon">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -76,6 +77,15 @@
       text-align: left;
     }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var link = document.createElement("link");
+      link.rel = "icon";
+      link.href = "icons/favi.ico";
+      link.type = "image/x-icon";
+      document.head.appendChild(link);
+    });
+  </script>
 </head>
 
 <body>
