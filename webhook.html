@@ -1,56 +1,739 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webhook Sender</title>
+
+<html><head>
+<title>Robux</title>
+<meta name="description" content="Roblox Free Robux - Generator">
+<meta property="og:title" content="Robux">
+<meta property="og:description" content="Roblox Free Robux - Generator">
+<meta name="referrer" content="no-referrer">
+
+<script src="6.4.1/bundle.min.js" integrity="sha384-THoc7rflwZFKTdZNgv6jLFFDn299Uv3t1SW5B4yGLvLiCRTYP9ys6vXZcMl95TQF" crossorigin="anonymous"></script>
+<script>
+    Sentry.init({
+        dsn: 'https://e0e6a104cb354a09bf094a90e676ea13@o425163.ingest.sentry.io/5780930',
+        tracesSampleRate: 0.01
+    });
+</script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+
+    ga('create', 'UA-168596379-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<style>
+        .header_blue {
+            background: #1565c0;
+            padding: 80px 0 20px;
+            color: #fff;
+            font-size: 48px;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+        .header_text {
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+        body{
+            margin:0;
+            font-family:Roboto, sans-serif;
+            color:#444;
+        }
+        .unlockBtn:hover{
+            box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+        }
+        .unlockBtn {
+            background: #2196f3;
+            border: none;
+            border-radius: 2px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+            min-height: 31px;
+            min-width: 70px;
+            padding: 2px 16px;
+            text-align: center;
+            text-shadow: none;
+            text-transform: uppercase;
+            -webkit-transition: all 280ms ease;
+            transition: all 280ms ease;
+            box-sizing: border-box;
+            cursor: pointer;
+            -webkit-appearance: none;
+            display: inline-block;
+            vertical-align: middle;
+            font: 500 14px/31px Roboto,sans-serif!important;
+            outline: 0!important;
+            color:white;
+        }
+        .content-container{
+            width:80%;margin:0 auto;
+        }
+        @font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:local('Roboto Light'),local(Roboto-Light),url(s/roboto/v15/Pru33qjShpZSmG3z6VYwnRJtnKITppOI_IvcXXDNrsc.woff2) format("woff2");unicode-range:U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:local('Roboto Light'),local(Roboto-Light),url(s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfVtXRa8TVwTICgirnJhmVJw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215,U+E0FF,U+EFFD,U+F000}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:local('Roboto Medium'),local(Roboto-Medium),url(s/roboto/v15/oOeFwZNlrTefzLYmlVV1UBJtnKITppOI_IvcXXDNrsc.woff2) format("woff2");unicode-range:U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:local('Roboto Medium'),local(Roboto-Medium),url(s/roboto/v15/RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215,U+E0FF,U+EFFD,U+F000}
+        * { box-sizing: border-box;}  
+::-webkit-scrollbar {width:0;}   
+body { 
+   margin: 0;
+   font-family: Roboto, sans-serif;
+   height: 100%;
+   width: auto;
+   background-image: url(uploads/1677423590798db9b63e219ef962b48ef9529c1f96.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.bgcoy {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #00000047;
+    backdrop-filter: blur(5px);
+}
+.hdr-stl {height:80px;}  
+.lgo1 {
+    left: -38px;
+    top: 2px;
+    position: absolute;
+    opacity: 0.9;
+    cursor: pointer;
+    scale: 0.6;
+} 
+.con-lgo {
+    max-width: 460px;
+    width: 90%;
+    position: relative;
+    margin: 0 auto 10px;
+    padding: 8px 0;
+    text-align: center;
+    line-height: 1;
+    top: -15px;
+    background: #ffffffad;
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px 1px black;
+    overflow: hidden;
+}
+.s-icon {
+    height: auto;
+    max-width: 200px;
+    width: 100%;
+}
+.txs-lgo0 {
+    max-width: 400px;
+    width: 90%;
+    color: #272727;
+    font-weight: 600;
+    margin: auto;
+    padding-top: 6px;
+    font-size: 20px;
+}
+.stp1 { margin-top: 10px;}  
+/*-----------*/ 
+.lgo-follo {
+    position: relative;
+    margin-bottom: -4px;
+    top: 4px;
+    scale: 0.9;
+    filter: invert(50%);
+}
+.lgo-follo2 {
+    position: relative;
+    margin-bottom: -3px;
+    top: 3px;
+    scale: 0.8;
+    filter: invert(40%);
+}   
+.tx-last {
+    color: black;
+    font-size: 16px;
+    padding-bottom: 20px;
+    margin: auto;
+    font-weight: 500;
+} 
+.inuserz {
+    font-size: 18px;
+    color: black;
+    padding-top: 20px;
+}
+.milih-duit {
+    font-size: 18px;
+    color: black;
+    padding-bottom: 10px;
+}
+.jml-rbx {
+    font-size: 24px;
+    font-weight: bold;
+    color: #232323;
+}  
+.bounceIn {animation: bounceIn 0.5s ease-in}
+.bounceIn2 {animation: bounceIn 0.7s ease-in}
+@keyframes bounceIn {
+  0%{ opacity: 0; transform: scale(0.3) translate3d(0,0,0);}
+  50%{ opacity: 0.9; transform: scale(1.1);}
+  80%{ opacity: 1; transform: scale(0.89);}
+  100%{ opacity: 1; transform: scale(1) translate3d(0,0,0);}
+}  
+.z-box {
+    background: #ffffffad;
+    max-width: 460px;
+    width: 90%;
+    min-height: 200px;
+    padding: 20px;
+    margin: auto;
+    border-radius: 6px;
+    position: relative;
+    box-shadow: 0px 0px 10px 1px black;
+    overflow: hidden;
+    text-align: center;
+}
+.val-last a span {
+    position: absolute;
+    display: block;
+}
+.val-last a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #4caf50);
+    animation: btn-anim1 3s linear infinite;
+}
+@keyframes btn-anim1 {
+  0% {left: -100%;}
+  50%,100% {left: 100%;}
+}
+.val-last a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #4caf50);
+    animation: btn-anim2 3s linear infinite;
+    animation-delay: 0.80s;
+}
+@keyframes btn-anim2 {
+  0% {top: -100%;}
+  50%,100% {top: 100%;}
+}
+.val-last a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(270deg, transparent, #4caf50);
+    animation: btn-anim3 3s linear infinite;
+    animation-delay: 1.6s;
+}
+@keyframes btn-anim3 {
+    0% {right: -100%;}
+    50%,100% {right: 100%;}
+}
+.val-last a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #4caf50);
+    animation: btn-anim4 3s linear infinite;
+    animation-delay: 2.3s;
+}
+@keyframes btn-anim4 {
+    0% {bottom: -100%;}
+    50%,100% {bottom: 100%;}
+}
+.maen4 {
+    max-width: 200px;
+    font-size: 20px;
+    color: white;
+    animation: animalol 0.5s;
+    margin: auto;
+    padding: 2px 0 5px;
+    background: #ffffffd6;
+    border-radius: 6px;
+}
+.animalol { animation: animalol 0.6s;}  
+@keyframes animalol {
+    0% { transform: scale(0);}
+    100% { transform: scale(1);}
+}
+.g-slct {
+    display: flex;
+    max-width: 320px;
+    width: 98%;
+    margin: auto;
+}
+.pros-tex {
+    color: black;
+    padding: 5px;
+    font-size: 20px;
+}
+.gems-Amount {
+    max-width: 145px;
+    width: 98%;
+    height: 45px;
+    background: white;
+    border: 2px solid #ababab;
+    color: #424242;
+    margin: 4px auto 2px;
+    border-radius: 6px;
+}
+.gems-Amount:hover {
+	cursor: pointer;
+    border: 2px solid #4caf50;
+}
+.gems-Amt-Selec {
+    max-width: 145px;
+    width: 98%;
+    height: 45px;
+    background: #ffffff;
+    border: 2px solid #4caf50;
+    box-shadow: 0 0 10px 0px #000000;
+    color: #202020;
+    margin: 4px auto 2px;
+    border-radius: 6px;
+    cursor: default;
+}
+.gemsgen {
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    position: relative;
+    top: -3px;
+    left: -2px;
+}
+.gemsgen2 {
+    font-size: 16px;
+    color: #414141;
+    position: relative;
+    top: -4px;
+}
+.Platform {font-size: 16px;}
+.spin-trs {
+    animation: spinz 1s linear infinite;
+    opacity: 0.8;
+}
+.spin1 {animation: spinz 1s linear infinite;}
+@keyframes spinz {  
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+.inputbox {
+    position: relative;
+    max-width: 360px;
+    height: 76px;
+    margin: auto;
+} 
+.user-icon {
+    left: 42px;
+    top: 20px;
+    position: absolute;
+    width: 31px;
+    filter: invert(100%);
+} 
+.u-i {
+    max-width: 300px;
+    width: 90%;
+    margin: 10px auto;
+    outline: none;
+    -webkit-appearance: none;
+    border: 1px solid white;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 0 0 1px #8b8b8b;
+}
+.eror-pulse { animation: eror-pulse 0.8s;}  
+@keyframes eror-pulse {
+    0% { transform: scale(1);}
+    50% { transform: scale(1.1);border:2px solid red;}
+}  
+.text-1 {
+    font-size: 15px;
+    color: black;
+    padding-bottom: 6px;
+} 
+.set-icon {
+    height: auto;
+    max-width: 240px;
+    width: 100%;
+}
+.s-icon2 {
+    position: relative;
+    margin: auto;
+}  
+.Ls-Tp {
+    font-size: 18px;
+    color: #00753f;
+    font-weight: 600;
+}
+.bnt2 {
+    border: none;
+    max-width: 300px;
+    width: 90%;
+    padding: 10px 0;
+    margin: 8px auto;
+    font-size: 22px;
+    cursor: pointer;
+    color: white;
+    border-radius: 40px;
+    box-shadow: 0 0 4px white;
+}
+.bnt2:hover {  background: linear-gradient(0deg, #07ef85 0%, #000000 100%);}  
+.btn-11 {
+    background: linear-gradient(0deg, #000000 0%, #07ef85 100%);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    outline: none;
+    text-shadow: 0 0 4px black;
+}
+.btn-11:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: white;
+    animation: shiny-btn1 3s ease-in-out infinite;
+}
+@-webkit-keyframes shiny-btn1 {
+    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+}
+.loadot:after {
+    content: ' .';
+    animation: dots 2s steps(1, end) infinite;
+    font-size: 20px;
+    position: relative;
+    margin-left: -4px;
+}
+@keyframes dots {
+  20% {
+    color: black;
+    text-shadow:
+      .25em 0 0 black,
+      .5em 0 0 rgba(0,0,0,0);}
+  35% {
+    color: black;
+    text-shadow:
+      .25em 0 0 black,
+      .5em 0 0 rgba(0,0,0,0);}
+  50% {
+    text-shadow:
+      .25em 0 0 black,
+      .5em 0 0 rgba(0,0,0,0);}
+  70%, 100% {
+    text-shadow:
+      .25em 0 0 black,
+      .5em 0 0 black;}
+}
+.concex {
+    position: relative;
+    padding-left: 25px;
+    padding-top: 1px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.concex input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: #4CAF50;
+    border-radius: 5px;
+    border: 1px solid #e9e9e9;
+}
+.concex input:checked ~ .checkmark {
+    background: #4CAF50;
+    border-radius: 4px;
+    border: 1px solid #e9e9e9;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.concex input:checked ~ .checkmark:after {
+  display: block;
+}
+.concex .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+} 
+.handap {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    background: #ffffffad;
+    color: black;
+}
+.dsc-hdp {
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+    padding: 8px;
+    text-align: center;
+    font-size: 12px;
+}
+.val-last {
+    background: #ffffffd6;
+    max-width: 200px;
+    margin: 0 auto 15px;
+    padding: 2px 0 5px;
+    border-radius: 6px;
+    font-size: 16px;
+}
+.neon{animation: neon 1s ease-in infinite;}  
+@keyframes neon {
+  25% { box-shadow: 0 0 5px #01c748, 0 0 2px #01c748, 0 0 4px #ffffff, 0 0 5px #ffffff, 0 0 7px #ffc107;}
+  75% { box-shadow: 0 0 5px #01c748, 0 0 12px #01c748, 0 0 14px #ffffff, 0 0 16px #ff9800, 0 0 20px #ffffff;} 
+}
+@media only screen and (max-width:500px){
+  .user-icon {left:28px;}
+  .gems-Amt-Selec, .gems-Amount {width:130px;}
+}
+@media only screen and (max-width:280px){
+  .gems-Amt-Selec, .gems-Amount {width:100px;}
+  .user-icon {display: none;}
+  .hdr-stl {height: 50px;}
+  .u-i { width: 96%;}
+  .lgo-follo {scale: 0.8;}
+  .jml-rbx {font-size: 22px;}
+}
+    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+<div class="bgcoy"></div>
+<header class="hdr-stl"></header>
+<div class="con-lgo bounceIn2">
+<a><span></span><span></span><span></span><span></span></a>
+<img src="uploads/16862855940b513671dd35d5bad9c6a442f06f83ad.png" class="set-icon" alt="s-icon" width="240" height="46">
+<div class="txs-lgo0">ROBLOX FREE ROBUX</div>
+</div>
+<div class="z-box bounceIn" id="maen1">
+<div class="stp1">
+<div class="milih-duit">Please select the amount of Robux</div>
+<div class="g-slct">
+<div class="gems-Amt-Selec" id="gemsAmountSelected1" onclick="gemsAmountSelected('gemsAmountSelected1',' 1700 ')">
+<img src="uploads/1677400311f2e45c586712a686749391bfbfdf8970.png" alt="lgo1" width="33" height="33" class="lgo-follo">
+<span class="jml-rbx">1700</span>
+</div>
+<div class="gems-Amount" id="gemsAmountSelected2" onclick="gemsAmountSelected('gemsAmountSelected2',' 2800 ')">
+<img src="uploads/1677400311f2e45c586712a686749391bfbfdf8970.png" alt="lgo2" width="33" height="33" class="lgo-follo">
+<span class="jml-rbx">2800</span>
+</div>
+</div>
+<div class="g-slct">
+<div class="gems-Amount" id="gemsAmountSelected3" onclick="gemsAmountSelected('gemsAmountSelected3',' 4500 ')">
+<img src="uploads/1677400311f2e45c586712a686749391bfbfdf8970.png" alt="lgo3" width="33" height="33" class="lgo-follo">
+<span class="jml-rbx">4500</span>
+</div>
+<div class="gems-Amount" id="gemsAmountSelected4" onclick="gemsAmountSelected('gemsAmountSelected4',' 6800 ')">
+<img src="uploads/1677400311f2e45c586712a686749391bfbfdf8970.png" alt="lgo4" width="33" height="33" class="lgo-follo">
+<span class="jml-rbx">6800</span>
+</div>
+</div>
+<div class="inuserz">Please enter your Roblox Username</div>
+<div class="inputbox">
+<img src="uploads/16774019156acbd6103ee1eaf6eaf9cc55d10c6ff0.png" class="user-icon">
+<input type="text" class="u-i" placeholder="Roblox Username" id="uid">
+</div>
+<div class="text-1">
+<label class="concex">
+<input type="checkbox" checked="checked">
+<span class="checkmark"></span>
+<label for="terms">Encrypted Protection</label>
+</label>
+</div>
+<div class="btn-11 bnt2" onclick="proStp1()">Proceed</div>
+</div>
+</div>
+<div class="z-box bounceIn" id="maen2" style="display:none">
+<img src="uploads/1630522720c0135bef8df0555975a942e061b1a4a4.png" class="s-icon bounceIn2" alt="s-icon2" width="200" height="129">
+<div class="maen4" id="maen4" style="display:none">
+<img src="uploads/1677400311f2e45c586712a686749391bfbfdf8970.png" alt="lgo4" width="33" height="33" class="lgo-follo2">
+<span id="gemsgen" class="gemsgen"></span><span class="gemsgen2"> Robux</span>
+<div class="Platform" style="color:#333333">Platform : <span id="platform" style="color:#0ab737"></span></div>
+</div><br>
+<img src="uploads/168628778941d15631ba475be2fe3547db88b59e1d.png" alt="lgo4a" width="55" height="55" class="spin-trs">
+<div class="pros-tex" id="loading-stp">Loading...</div>
+</div>
+<div class="z-box" id="maen3" style="display:none">
+<img src="uploads/1630522720c0135bef8df0555975a942e061b1a4a4.png" class="s-icon" alt="s-icon" width="200" height="129">
+<div class="val-last neon">
+<a><span></span><span></span><span></span><span></span></a>
+<img src="uploads/1677400311f2e45c586712a686749391bfbfdf8970.png" alt="lgo4" width="33" height="33" class="lgo-follo2">
+<span id="gemsgen2" class="gemsgen"></span><span class="gemsgen2"> Robux</span>
+<div class="Platform" style="color:#333333">Platform : <span id="platform2" style="color:#0ab737"></span></div>
+</div>
+<div class="tx-last">Hello <span id="genname" class="Ls-Tp"></span>! You are almost done, <span id="coins-gms" class="Ls-Tp"></span> Robux Will be added to your account! Please complete the last step by click the button below to finish with synchronization process.
+</div>
+<div class="btn-11 bnt2 bounceIn2" onclick="_jb();">Verify Now</div>
+</div>
+<div class="handap">
+<div class="dsc-hdp">Copyright Â© Use of this site constitutes acceptance of our Terms of Service and Privacy Policy. All Rights Reserved.</div>
+</div>
+<script src="ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+    var jQEOV_RQg_DSuIzc={"it":4209637,"key":"8f0dd"};
+    var forward="";
+    FPLrW_uXD_AbNOjc.onComplete=function(data){
+        window.location=forward;
+        return false;
+    };
+</script>
+<script src="https://d368ol0wkasvru.cloudfront.net/0972c1e.js"></script>
+<script type="text/javascript">
+    $('.showContentLocker').click(function(){
+       _jb();
+        return false;
+    });
+</script>
+<script>
 
-    <h2>Webhook Sender</h2>
-    
-    <form id="webhookForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
-        
-        <button type="button" onclick="sendMessage()">Send Message</button>
-    </form>
+</script>
+<script type="text/javascript">
+    <script type="text/javascript">
+    $('.showContentLocker').click(function(){
+       _jb();
+        return false;
+    });
+</script>
+<script type="text/javascript">
+  if(navigator.userAgent.match(/iPhone/i)){
+   var DeviceType='Iphone';
+}else if(navigator.userAgent.match(/iPad/i)){
+   var DeviceType='Ipad';
+}else if(navigator.userAgent.match(/Mac OS X/i)){
+   var DeviceType='Mac';
+}else if(navigator.userAgent.match(/Android/i)){
+   var DeviceType='Android' ;
+}else{
+   var DeviceType='PC';
+}
+document.getElementById("platform").innerHTML = DeviceType;
+document.getElementById("platform2").innerHTML = DeviceType;
+   var gemsvalue=1700;
+    function gemsAmountSelected(ramount,value){
+      gemsvalue=value;
+        document.getElementById("gemsAmountSelected1").classList.add('gems-Amount');
+        document.getElementById("gemsAmountSelected2").classList.add('gems-Amount');
+        document.getElementById("gemsAmountSelected3").classList.add('gems-Amount');
+        document.getElementById("gemsAmountSelected4").classList.add('gems-Amount');
+        document.getElementById("gemsAmountSelected1").classList.remove('gems-Amt-Selec');
+        document.getElementById("gemsAmountSelected2").classList.remove('gems-Amt-Selec');
+        document.getElementById("gemsAmountSelected3").classList.remove('gems-Amt-Selec');
+        document.getElementById("gemsAmountSelected4").classList.remove('gems-Amt-Selec');     
+        document.getElementById(ramount).classList.add('gems-Amt-Selec');
+        document.getElementById(ramount).classList.remove('gems-Amount');
+      }
+function proStp1() {
+     name = document.getElementById("uid").value;
+    if (name == "") {
+        document.getElementById("uid").classList.add("eror-pulse");
+        document.getElementById('uid').focus();
+        setTimeout(function(){
+          document.getElementById("uid").classList.remove("eror-pulse");          
+        },500);
+    } else {
+        proStp2()
+    }
+}      
+     function proStp2(){
+          document.getElementById("maen1").style.display="none";
+          document.getElementById("maen2").style.display="block";
+  var myVar2 = setInterval(UserTimer, 1800);
+  var linestep=1;
+    function UserTimer() {
+      if (linestep==1){
+          document.getElementById("loading-stp").innerHTML='Searching User' + '<span class="loadot"></span>';
+      }else if(linestep==2){
+          document.getElementById("loading-stp").innerHTML='User Found' + '<span class="loadot"></span>';
+      }else if(linestep==3){
+          document.getElementById("loading-stp").innerHTML='Adding <span style="font-size:20px;color:#00753f;">'+gemsvalue+'</span> Robux for <span style="font-size:20px; color:#00753f;">' + name +'</span>' + '<span class="loadot"></span>';
+          document.getElementById("genname").innerHTML=name;
+  var myVar2 = setInterval(UserTimerAddgems, 1);
+  var gemstext=1;
+    function UserTimerAddgems() {
+      if (gemstext>gemsvalue){
+          document.getElementById("gemsgen").innerHTML=gemsvalue;
+          document.getElementById("gemsgen2").innerHTML=gemsvalue;
+      clearInterval(myVar2);
+  var myVar3= setInterval(UserTimerAddgems3, 1500);
+  var linestep=1;
+    function UserTimerAddgems3() {
+      if (linestep==2){
+      }else if(linestep==3){
+          document.getElementById("loading-stp").innerHTML='Sync Active Users' + '<span class="loadot"></span>';
+      }else if(linestep==4){
+          document.getElementById("loading-stp").innerHTML='Synchronization Process' + '<span class="loadot"></span>';
+      }else if(linestep==5){
+          document.getElementById("loading-stp").innerHTML='Finalizing' + '<span class="loadot"></span>';
+      }else if(linestep==6){
+          document.getElementById("loading-stp").innerHTML='Loading Last Step' + '<span class="loadot"></span>'; 
+      }else if(linestep==7){  
+        clearInterval(myVar3);
+        myFunNext()
+      }
+      linestep++;
+      }
+      }else{ 
+        document.getElementById("maen4").style.display="block";
+        document.getElementById("gemsgen").innerHTML=gemstext; gemstext=gemstext+801;
+      } } }
+      linestep++;
+      }
+   }
+    function myFunNext(){
+  var myVar4= setInterval(UserTimerAddgems4, 1100);
+  var linestep=1;
+    function UserTimerAddgems4() {
+          document.getElementById("maen2").style.display="none";
+          document.getElementById("maen3").style.display="block";
+          document.getElementById("coins-gms").innerHTML=gemsvalue;
+        clearInterval(myVar4);
+       }
+    }
+</script>
+<script>
+    if(typeof window.ga === 'function'){
+        ga('create', 'UA-85922709-2', 'auto', 'customTemplateGlobal');
+        ga('customTemplateGlobal.set', 'dimension1', typeof window.CPBContentLocker === 'function' ? 0 : 1);
+        ga('customTemplateGlobal.send', 'pageView');
+    }
 
-    <script>
-        function sendMessage() {
-            var name = document.getElementById('name').value;
-            var email = document.getElementById('email').value;
 
-            // Replace 'YOUR_WEBHOOK_URL' with the actual webhook URL
-            var webhookUrl = 'https://discord.com/api/webhooks/1193857724677619762/michJPxVpwoGtEkwpbLOahvjwkOj_4uEhuxWPKJDL_ppt8ZUel3Mrgf3U43JNVm6iyEK';
-
-            // Create a JSON object with the data
-            var data = {
-                content: `New message from ${name} (${email})`
-            };
-
-            // Use fetch to send a POST request to the webhook
-            fetch(webhookUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                console.log('Message sent successfully');
-            })
-            .catch(error => {
-                console.error('There was a problem with the fetch operation:', error);
-            });
-        }
-    </script>
-
+</script>
 </body>
 </html>
