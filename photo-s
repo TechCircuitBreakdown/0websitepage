@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Pictures</title>
+    <style>
+        /* Add some basic styling if needed */
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        // Function to fetch and display images
+        function displayImages() {
+            const rootDirectory = 'Rootfotos'; // Change this to your actual directory name
+
+            // Fetch images in the directory
+            fetch(`${rootDirectory}/`)
+                .then(response => response.text())
+                .then(data => {
+                    // Extract image file names from the response HTML
+                    const imageNames = data.match(/<a href="([^"]+\.(jpg|jpeg|png|gif))">/gi);
+
+                    if (imageNames) {
+                        // Create image elements and append them to the body
+                        imageNames.forEach(imageName => {
+                            const imageUrl = `${rootDirectory}/${imageName.match(/<a href="([^"]+\.(jpg|jpeg|png|gif))">/i)[1]}`;
+                            const imgElement = document.createElement('img');
+                            imgElement.src = imageUrl;
+                            document.body.appendChild(imgElement);
+                        });
+                    }
+                })
+                .catch(error => console.error('Error fetching images:', error));
+        }
+
+        // Call the displayImages function when the page loads
+        window.onload = displayImages;
+    </script>
+
+</body>
+</html>
