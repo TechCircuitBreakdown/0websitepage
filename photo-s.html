@@ -16,28 +16,24 @@
 <body>
 
     <script>
-        // Function to fetch and display images
+        // Function to display images
         function displayImages() {
-            const rootDirectory = 'Rootfotos'; // Change this to your actual directory name
+            const rootDirectory = 'https://raw.githubusercontent.com/TechCircuitBreakdown/0websitepage/main/Rootfotos'; // GitHub raw content URL
 
-            // Fetch images in the directory
-            fetch(`${rootDirectory}/`)
-                .then(response => response.text())
-                .then(data => {
-                    // Extract image file names from the response HTML
-                    const imageNames = data.match(/<a href="([^"]+\.(jpg|jpeg|png|gif))">/gi);
+            // Image file names
+            const imageNames = [
+                'image1.jpg',
+                'image2.jpg',
+                // Add more image names as needed
+            ];
 
-                    if (imageNames) {
-                        // Create image elements and append them to the body
-                        imageNames.forEach(imageName => {
-                            const imageUrl = `${rootDirectory}/${imageName.match(/<a href="([^"]+\.(jpg|jpeg|png|gif))">/i)[1]}`;
-                            const imgElement = document.createElement('img');
-                            imgElement.src = imageUrl;
-                            document.body.appendChild(imgElement);
-                        });
-                    }
-                })
-                .catch(error => console.error('Error fetching images:', error));
+            // Create image elements and append them to the body
+            imageNames.forEach(imageName => {
+                const imageUrl = `${rootDirectory}/${imageName}`;
+                const imgElement = document.createElement('img');
+                imgElement.src = imageUrl;
+                document.body.appendChild(imgElement);
+            });
         }
 
         // Call the displayImages function when the page loads
