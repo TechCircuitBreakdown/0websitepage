@@ -6,18 +6,21 @@
     <title>Display Pictures</title>
     <style>
         /* Reset margin and padding for body and images */
-        body, img {
+        body {
             margin: 0;
             padding: 0;
-            line-height: 0; /* Set line-height to zero */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 10px;
         }
 
-        /* Add some basic styling if needed */
         img {
             max-width: 20%;
             height: auto;
-            cursor: pointer; /* Add pointer cursor to indicate clickable */
-            vertical-align: top; /* Align the top of the images */
+            cursor: pointer;
+            vertical-align: top;
         }
 
         /* Style for the enlarged image overlay */
