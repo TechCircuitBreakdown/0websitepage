@@ -9,15 +9,13 @@
         body {
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            align-items: flex-start;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
             gap: 10px;
         }
 
         img {
-            max-width: 20%;
+            width: 100%;
             height: auto;
             cursor: pointer;
             vertical-align: top;
