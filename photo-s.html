@@ -8,6 +8,31 @@
         body {
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start; /* Align items to the top of the container */
+        }
+        img {
+            max-width: 20%;
+            vertical-align: top;
+            cursor: pointer;
+            margin: 10px;
+        }
+        #lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        #lightbox img {
+            max-width: 80%;
+            max-height: 80%;
         }
     </style>
 </head>
@@ -16,13 +41,32 @@
 <h1>Image Gallery</h1>
 
 <!-- Replace the image filenames with the actual filenames and adjust the paths accordingly -->
-<img src="https://github.com/TechCircuitBreakdown/0websitepage/raw/main/Rootfotos/bird-7789120_1920.jpg" alt="Bird Image" style="max-width: 20%; vertical-align: top;">
-<img src="https://github.com/TechCircuitBreakdown/0websitepage/raw/main/Rootfotos/Osama.jpg" alt="Osama Image" style="max-width: 20%; vertical-align: top;">
-<img src="https://github.com/TechCircuitBreakdown/0websitepage/raw/main/Rootfotos/pexels-oleksandr-p-321552 (1).jpg" alt="Pexels Image" style="max-width: 20%; vertical-align: top;">
-<img src="https://github.com/TechCircuitBreakdown/0websitepage/raw/main/Rootfotos/HELP.png" alt="Help Image" style="max-width: 20%; vertical-align: top;">
-<img src="https://github.com/TechCircuitBreakdown/0websitepage/raw/main/Rootfotos/six%20pack.jpg" alt="Six Pack Image" style="max-width: 20%; vertical-align: top;">
-<img src="https://github.com/TechCircuitBreakdown/0websitepage/raw/main/Rootfotos/AuTiSTiC.jpg" alt="Autistic Image" style="max-width: 20%; vertical-align: top;">
-<img src="https://github.com/TechCircuitBreakdown/0websitepage/raw/main/Rootfotos/Barbarahahaha.png" alt="Barbarahahaha Image" style="max-width: 20%; vertical-align: top;">
+<img src="https://github.com/TechCircuitBreakdown/0websitepage/raw/main/Rootfotos/bird-7789120_1920.jpg" alt="Bird Image" onclick="openLightbox(this)">
+<img src="https://github.com/TechCircuitBreakdown/0websitepage/raw/main/Rootfotos/Osama.jpg" alt="Osama Image" onclick="openLightbox(this)">
+<img src="https://github.com/TechCircuitBreakdown/0websitepage/raw/main/Rootfotos/pexels-oleksandr-p-321552 (1).jpg" alt="Pexels Image" onclick="openLightbox(this)">
+<img src="https://github.com/TechCircuitBreakdown/0websitepage/raw/main/Rootfotos/HELP.png" alt="Help Image" onclick="openLightbox(this)">
+<img src="https://github.com/TechCircuitBreakdown/0websitepage/raw/main/Rootfotos/six%20pack.jpg" alt="Six Pack Image" onclick="openLightbox(this)">
+<img src="https://github.com/TechCircuitBreakdown/0websitepage/raw/main/Rootfotos/AuTiSTiC.jpg" alt="Autistic Image" onclick="openLightbox(this)">
+<img src="https://github.com/TechCircuitBreakdown/0websitepage/raw/main/Rootfotos/Barbarahahaha.png" alt="Barbarahahaha Image" onclick="openLightbox(this)">
+
+<div id="lightbox" onclick="closeLightbox()">
+    <img id="lightboxImage" src="" alt="Enlarged Image">
+</div>
+
+<script>
+    function openLightbox(element) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+
+        lightbox.style.display = 'flex';
+        lightboxImage.src = element.src;
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.style.display = 'none';
+    }
+</script>
 
 </body>
 </html>
